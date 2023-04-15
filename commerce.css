@@ -9,7 +9,7 @@
     src: url('./font/KeepCalm-Medium.ttf');
 }
 /* logo style */
-.logo{
+.logo img{
     margin: 30px 0 0 0;
 }
 /* body style */
@@ -22,35 +22,46 @@ body{
  }
 /* container style */
 .container{
-    margin: 0 25px 0 25px;
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 /* nav style */
 nav{
-    overflow: auto;
+flex: 1;
+text-align: right;
 }
-
- 
+.navbar{
+display: flex;
+align-items: center;
+padding: 20px;
+}
 /* list style */
 nav  li{
 display: block;
 float: right;
 padding: 15px 20px;
+margin-right: 20px;
 font-weight:1000 ;
 }
-/* anchor style */
+/* link style */
 nav li a{
     text-decoration: none; 
     color:#ff523b; 
     transition: 1s;
     
 }
-/* anchor hover style */
+/* link hover style */
 nav li a:hover{
 color:  #f8d404 ;
 text-decoration: underline;
 }
 nav li a:active{
-    color: #f88508;
+    color: #f8850f;
+}
+.cart{
+    margin: -7px 0 0 0;
 }
 /* row style */
 .row{
@@ -67,13 +78,12 @@ nav li a:active{
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
-    width: 500px;
 }
 .col-2 h1{
     font-size: 50px;
     line-height: 60px;
-    margin: 25px 0;
 }
+
 /* col-2 . button style*/
 .button{
     transition: 0.7s;
@@ -87,9 +97,7 @@ nav li a:active{
 }
 .button:hover{
     color: #f8d404;
-}
-button:visited{
-    color: rgb(253, 163, 253);
+      background: #a32e1f;
 }
  /* div.login style
 .login{
@@ -122,12 +130,11 @@ input:hover{
     background-color: white;
     margin:   5px;
     border: none;
-    
 }
-/* password input style */
+/* password input style
 #password {
     margin: 0 33px 20px 0;
-}
+} */
 /* name input style */
 #name {
     margin: 0 3px 0 0;
@@ -173,6 +180,9 @@ img{
 .col-3 img{
     width: 100%;
 }
+.col-3 i{
+    color: #f8850f;
+}
 .small-container{
     max-width: 1080px;
     margin: auto;
@@ -187,6 +197,9 @@ img{
 }
 .col-4 img{
     width:100%;
+}
+.col-4 i{
+    color: #f88508;
 }
 .title{
     text-align: center;
@@ -223,6 +236,7 @@ h4{
     background: radial-gradient( white, #2a9bdc);
     margin: 80px 0 0 0 ;
     padding: 30px 0;
+    border-radius: 30px;
 }
 .col-2 .offer-img{
     padding: 50px;
@@ -230,3 +244,125 @@ h4{
 small{
     color: #555;
 }
+/* testinmonial */
+.testimonial{
+    margin-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.testimonial h3{
+    color: #f88508;
+}
+.testimonial p{
+    font-size: 12px;
+    color: #555;
+}
+.brands{
+    margin: 100px auto;
+}      
+.col-5{
+    width: 160px;
+}        
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.6s;
+} 
+.col-5 img:hover{
+    filter: grayscale(0%);
+}
+/* footer */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 20px;
+    border-radius: 30px 30px 0 0;
+}
+.footer p{
+    color: #8a8a8a; 
+}
+.footer h3{
+    color:#fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col--3, .footer-col--4{
+    min-width: 250px;
+    margin: 0 0 20px 0;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex:1 ;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin: 0 0 20px 0;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+   }
+   .footer ul{
+    list-style-type: none;
+   }
+   .app-logo{
+    margin-top: 20px;
+   }
+   .app-logo img{
+    width: 120px;
+   }
+   .footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0px;
+   }
+   .copyright{
+    text-align: center;
+   }
+   .menu-icon{
+    width: 28px;
+    margin-left: 20px;
+   }
+
+   /* media querry for menu */
+
+   @media only screen and (max-width: 800px){
+        nav ul{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100%;
+        }
+        nav ul li{
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul li a{
+            color: #fff;
+        }
+        .menu-icon{
+            display:block;
+            cursor: pointer;
+        }
+   }
